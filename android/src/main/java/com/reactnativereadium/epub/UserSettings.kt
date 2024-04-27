@@ -223,14 +223,14 @@ class UserSettings(
 
     fun updateViewCSS(ref: String) {
         for (i in 0 until resourcePager.childCount) {
-            val webView = resourcePager.getChildAt(i).findViewById(R.id.webView) as? R2WebView
+            val webView = resourcePager.getChildAt(i).findViewById(org.readium.r2.navigator.R.id.webView) as? R2WebView
             webView?.let {
                 applyCSS(webView, ref)
             } ?: run {
-                val zoomView = resourcePager.getChildAt(i).findViewById(R.id.r2FXLLayout) as R2FXLLayout
-                val webView1 = zoomView.findViewById(R.id.firstWebView) as? R2BasicWebView
-                val webView2 = zoomView.findViewById(R.id.secondWebView) as? R2BasicWebView
-                val webViewSingle = zoomView.findViewById(R.id.webViewSingle) as? R2BasicWebView
+                val zoomView = resourcePager.getChildAt(i).findViewById(org.readium.r2.navigator.R.id.r2FXLLayout) as R2FXLLayout
+                val webView1 = zoomView.findViewById(org.readium.r2.navigator.R.id.firstWebView) as? R2BasicWebView
+                val webView2 = zoomView.findViewById(org.readium.r2.navigator.R.id.secondWebView) as? R2BasicWebView
+                val webViewSingle = zoomView.findViewById(org.readium.r2.navigator.R.id.webViewSingle) as? R2BasicWebView
 
                 webView1?.let {
                     applyCSS(webView1, ref)

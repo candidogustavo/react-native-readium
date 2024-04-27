@@ -78,6 +78,8 @@ class ReadiumView(
             payload
           )
         }
+
+        else -> {}
       }
     }
   }

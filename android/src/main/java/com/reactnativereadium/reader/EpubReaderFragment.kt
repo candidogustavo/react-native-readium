@@ -109,7 +109,7 @@ class EpubReaderFragment : VisualReaderFragment(), EpubNavigatorFragment.Listene
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = super.onCreateView(inflater, container, savedInstanceState)
-        val navigatorFragmentTag = getString(R.string.epub_navigator_tag)
+        val navigatorFragmentTag = getString(org.readium.r2.navigator.R.string.epub_navigator_tag)
 
         if (savedInstanceState == null) {
             childFragmentManager.commitNow {
